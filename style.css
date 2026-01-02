@@ -1,0 +1,75 @@
+/* ==========================================================================
+   Widget Chat Híbrido - Estilo Visual
+   Propiedad de: Eliana "Rage" Avila (@rxgeit)
+   Año: 2026
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Poppins:wght@400;600;800&family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&family=Montserrat:wght@400;600&family=Nunito:wght@400;700&display=swap');
+
+:root {
+    --font-head: 'Lilita One', cursive;
+    --font-body: {{fontBody}};
+    --f-size: {{fontSize}}px;
+    --r-outer: {{borderRadius}}px;
+    --r-inner: calc(var(--r-outer) - 6px);
+}
+
+* { box-sizing: border-box; }
+body, html { margin: 0; padding: 0; overflow: hidden; background: transparent; }
+
+#main-container {
+    width: 100vw; height: 100vh; padding: 60px;
+    display: flex; flex-direction: column;
+    justify-content: flex-end; 
+    gap: 25px; 
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
+    mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
+}
+
+.entry-row {
+    animation: bounceIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    width: fit-content; max-width: 450px; position: relative;
+}
+@keyframes bounceIn { from { opacity: 0; transform: translateY(40px) scale(0.9); } to { opacity: 1; transform: translateY(0) scale(1); } }
+.removing { animation: fadeOut 0.4s ease-in forwards; }
+@keyframes fadeOut { to { opacity: 0; transform: translateY(-40px); } }
+
+.outer-box {
+    background: var(--out-bg);
+    border-radius: var(--r-outer); 
+    padding: var(--padding-gap);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+.border-layer {
+    border-radius: calc({{borderRadius}}px - 4px);
+    padding: var(--b-thick);
+    background: var(--b-grad);
+}
+.content-layer {
+    background: var(--in-bg); border-radius: calc({{borderRadius}}px - 7px);
+    padding: 12px 18px; 
+    color: var(--txt-color); 
+    font-size: var(--f-size);
+    font-family: var(--font-body); font-weight: 600; 
+    display: flex; align-items: center; gap: 12px;
+    word-wrap: break-word; overflow-wrap: break-word; word-break: break-word;     
+    white-space: pre-wrap; line-height: 1.3;
+}
+.alert-content { justify-content: center; width: 100%; }
+
+.ev-name { color: var(--txt-name); font-family: var(--font-head); font-weight: normal; margin-right: 4px; }
+.ev-action { color: var(--txt-msg); font-family: var(--font-body); font-weight: 600; margin-right: 4px; }
+.ev-amount { color: var(--txt-name); font-family: var(--font-head); font-weight: normal; }
+
+.chat-badge {
+    position: absolute; border-radius: 20px; padding: 4px 15px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1); z-index: 10;
+    font-size: 0.8em; text-transform: uppercase; 
+    display: flex; align-items: center; gap: 8px;
+    background: var(--badge-bg); color: var(--badge-txt);
+    font-family: var(--font-head);
+}
+.svg-icon { width: 25px; height: 25px; flex-shrink: 0; color: var(--ico-color); }
+.badge-svg { width: 18px; height: 18px; color: var(--ico-color); }
+.no-emotes img.emote { display: none !important; }
+img.emote { height: 1.2em; vertical-align: middle; }
