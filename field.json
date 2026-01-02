@@ -1,148 +1,947 @@
 {
-  "previewMode": { "type": "dropdown", "label": "Preview", "value": "true", "options": { "true": "ON", "false": "OFF" }, "group": "General" },
-  "globalAlign": { "type": "dropdown", "label": "Alineación Chat", "value": "left", "options": { "left": "Izquierda", "right": "Derecha" }, "group": "General" },
-  "fontBody": { "type": "dropdown", "label": "Tipografía Mensaje", "value": "'Poppins', sans-serif", "options": { "'Poppins', sans-serif": "Poppins", "'Roboto', sans-serif": "Roboto", "'Open Sans', sans-serif": "Open Sans", "'Montserrat', sans-serif": "Montserrat", "'Nunito', sans-serif": "Nunito" }, "group": "General" },
-  "showEmotes": { "type": "dropdown", "label": "Emotes 7TV/BTTV", "value": "true", "options": { "true": "Mostrar", "false": "Ocultar" }, "group": "General" },
-  "hideDelay": { "type": "number", "label": "Ocultar tras (seg)", "value": 30, "group": "General" },
-  "fontSize": { "type": "number", "label": "Tamaño Letra", "value": 18, "group": "General" },
-  "borderRadius": { "type": "number", "label": "Redondeo", "value": 25, "group": "General" },
-  "borderThickness": { "type": "number", "label": "Grosor Borde", "value": 3, "group": "General" },
-  "chatGap": { "type": "number", "label": "Espacio Borde Chat", "value": 6, "group": "General" },
-  "eventGap": { "type": "number", "label": "Espacio Borde Eventos", "value": 6, "group": "General" },
-  "gradStart": { "type": "colorpicker", "label": "SVG Global Start", "value": "#fcbbf9", "group": "General" },
-  "gradEnd": { "type": "colorpicker", "label": "SVG Global End", "value": "#a96bea", "group": "General" },
-
-  "hideBots": { "type": "dropdown", "label": "Ocultar Bots", "value": "no", "options": {"yes":"SI","no":"NO"}, "group": "Anti-Spam" },
-  "botNames": { "type": "text", "label": "Nombres Bots (coma)", "value": "Nightbot,StreamElements,Streamelements", "group": "Anti-Spam" },
-  "hideCommands": { "type": "dropdown", "label": "Ocultar Comandos", "value": "no", "options": {"yes":"SI","no":"NO"}, "group": "Anti-Spam" },
-  "commandPrefixes": { "type": "text", "label": "Prefijos (!, ?)", "value": "!,?", "group": "Anti-Spam" },
-
-  "regOutBg": { "type": "colorpicker", "label": "Fondo Ext.", "value": "#ffffff", "group": "Chat: Usuario" },
-  "regBorderShow": { "type": "dropdown", "label": "Borde", "value": "yes", "options": {"yes":"SI","no":"NO"}, "group": "Chat: Usuario" },
-  "regBorderType": { "type": "dropdown", "label": "Tipo Borde", "value": "grad", "options": {"grad":"Degradado","solid":"Sólido"}, "group": "Chat: Usuario" },
-  "regBSolid": { "type": "colorpicker", "label": "[Sólido] Borde", "value": "#a96bea", "group": "Chat: Usuario" },
-  "regBStart": { "type": "colorpicker", "label": "[Grad] Borde 1", "value": "#fcbbf9", "group": "Chat: Usuario" },
-  "regBEnd": { "type": "colorpicker", "label": "[Grad] Borde 2", "value": "#a96bea", "group": "Chat: Usuario" },
-  "regInnerType": { "type": "dropdown", "label": "Tipo Fondo", "value": "solid", "options": {"grad":"Degradado","solid":"Sólido"}, "group": "Chat: Usuario" },
-  "regInSolid": { "type": "colorpicker", "label": "[Sólido] Fondo", "value": "#ffffff", "group": "Chat: Usuario" },
-  "regInStart": { "type": "colorpicker", "label": "[Grad] Fondo 1", "value": "#ffffff", "group": "Chat: Usuario" },
-  "regInEnd": { "type": "colorpicker", "label": "[Grad] Fondo 2", "value": "#f0f0f0", "group": "Chat: Usuario" },
-  "regTxt": { "type": "colorpicker", "label": "Color Texto", "value": "#333333", "group": "Chat: Usuario" },
-  "regIconColor": { "type": "colorpicker", "label": "Color Icono", "value": "#ffb0dd", "group": "Chat: Usuario" },
-  "regBadgeBg": { "type": "colorpicker", "label": "Fondo Rol", "value": "#ffffff", "group": "Chat: Usuario" },
-  "regBadgeTxt": { "type": "colorpicker", "label": "Texto Rol", "value": "#a96bea", "group": "Chat: Usuario" },
-  "regPosTop": { "type": "number", "label": "Pos. Arriba", "value": -20, "group": "Chat: Usuario" },
-  "regPosSide": { "type": "number", "label": "Pos. Lateral", "value": 20, "group": "Chat: Usuario" },
-
-  "subOutBg": { "type": "colorpicker", "label": "Fondo Ext.", "value": "#ffffff", "group": "Chat: Sub" },
-  "subBorderShow": { "type": "dropdown", "label": "Borde", "value": "yes", "options": {"yes":"SI","no":"NO"}, "group": "Chat: Sub" },
-  "subBorderType": { "type": "dropdown", "label": "Tipo Borde", "value": "grad", "options": {"grad":"Degradado","solid":"Sólido"}, "group": "Chat: Sub" },
-  "subBSolid": { "type": "colorpicker", "label": "[Sólido] Borde", "value": "#a96bea", "group": "Chat: Sub" },
-  "subBStart": { "type": "colorpicker", "label": "[Grad] Borde 1", "value": "#fcbbf9", "group": "Chat: Sub" },
-  "subBEnd": { "type": "colorpicker", "label": "[Grad] Borde 2", "value": "#a96bea", "group": "Chat: Sub" },
-  "subInnerType": { "type": "dropdown", "label": "Tipo Fondo", "value": "solid", "options": {"grad":"Degradado","solid":"Sólido"}, "group": "Chat: Sub" },
-  "subInSolid": { "type": "colorpicker", "label": "[Sólido] Fondo", "value": "#ffffff", "group": "Chat: Sub" },
-  "subInStart": { "type": "colorpicker", "label": "[Grad] Fondo 1", "value": "#ffffff", "group": "Chat: Sub" },
-  "subInEnd": { "type": "colorpicker", "label": "[Grad] Fondo 2", "value": "#f0f0f0", "group": "Chat: Sub" },
-  "subTxt": { "type": "colorpicker", "label": "Color Texto", "value": "#333333", "group": "Chat: Sub" },
-  "subIconColor": { "type": "colorpicker", "label": "Color Icono", "value": "#ffb0dd", "group": "Chat: Sub" },
-  "subBadgeBg": { "type": "colorpicker", "label": "Fondo Rol", "value": "#ffffff", "group": "Chat: Sub" },
-  "subBadgeTxt": { "type": "colorpicker", "label": "Texto Rol", "value": "#a96bea", "group": "Chat: Sub" },
-  "subPosTop": { "type": "number", "label": "Pos. Arriba", "value": -20, "group": "Chat: Sub" },
-  "subPosSide": { "type": "number", "label": "Pos. Lateral", "value": 20, "group": "Chat: Sub" },
-
-  "modOutBg": { "type": "colorpicker", "label": "Fondo Ext.", "value": "#ffffff", "group": "Chat: Mod" },
-  "modBorderShow": { "type": "dropdown", "label": "Borde", "value": "yes", "options": {"yes":"SI","no":"NO"}, "group": "Chat: Mod" },
-  "modBorderType": { "type": "dropdown", "label": "Tipo Borde", "value": "grad", "options": {"grad":"Degradado","solid":"Sólido"}, "group": "Chat: Mod" },
-  "modBSolid": { "type": "colorpicker", "label": "[Sólido] Borde", "value": "#a96bea", "group": "Chat: Mod" },
-  "modBStart": { "type": "colorpicker", "label": "[Grad] Borde 1", "value": "#a96bea", "group": "Chat: Mod" },
-  "modBEnd": { "type": "colorpicker", "label": "[Grad] Borde 2", "value": "#fcbbf9", "group": "Chat: Mod" },
-  "modInnerType": { "type": "dropdown", "label": "Tipo Fondo", "value": "grad", "options": {"grad":"Degradado","solid":"Sólido"}, "group": "Chat: Mod" },
-  "modInSolid": { "type": "colorpicker", "label": "[Sólido] Fondo", "value": "#a96bea", "group": "Chat: Mod" },
-  "modInStart": { "type": "colorpicker", "label": "[Grad] Fondo 1", "value": "#a96bea", "group": "Chat: Mod" },
-  "modInEnd": { "type": "colorpicker", "label": "[Grad] Fondo 2", "value": "#fcbbf9", "group": "Chat: Mod" },
-  "modTxt": { "type": "colorpicker", "label": "Color Texto", "value": "#ffffff", "group": "Chat: Mod" },
-  "modIconColor": { "type": "colorpicker", "label": "Color Icono", "value": "#ffffff", "group": "Chat: Mod" },
-  "modBadgeBg": { "type": "colorpicker", "label": "Fondo Rol", "value": "#ffffff", "group": "Chat: Mod" },
-  "modBadgeTxt": { "type": "colorpicker", "label": "Texto Rol", "value": "#a96bea", "group": "Chat: Mod" },
-  "modPosTop": { "type": "number", "label": "Pos. Arriba", "value": -20, "group": "Chat: Mod" },
-  "modPosSide": { "type": "number", "label": "Pos. Lateral", "value": 20, "group": "Chat: Mod" },
-
-  "vipOutBg": { "type": "colorpicker", "label": "Fondo Ext.", "value": "#ffffff", "group": "Chat: VIP" },
-  "vipBorderShow": { "type": "dropdown", "label": "Borde", "value": "yes", "options": {"yes":"SI","no":"NO"}, "group": "Chat: VIP" },
-  "vipBorderType": { "type": "dropdown", "label": "Tipo Borde", "value": "grad", "options": {"grad":"Degradado","solid":"Sólido"}, "group": "Chat: VIP" },
-  "vipBSolid": { "type": "colorpicker", "label": "[Sólido] Borde", "value": "#a96bea", "group": "Chat: VIP" },
-  "vipBStart": { "type": "colorpicker", "label": "[Grad] Borde 1", "value": "#fcbbf9", "group": "Chat: VIP" },
-  "vipBEnd": { "type": "colorpicker", "label": "[Grad] Borde 2", "value": "#a96bea", "group": "Chat: VIP" },
-  "vipInnerType": { "type": "dropdown", "label": "Tipo Fondo", "value": "grad", "options": {"grad":"Degradado","solid":"Sólido"}, "group": "Chat: VIP" },
-  "vipInSolid": { "type": "colorpicker", "label": "[Sólido] Fondo", "value": "#fcbbf9", "group": "Chat: VIP" },
-  "vipInStart": { "type": "colorpicker", "label": "[Grad] Fondo 1", "value": "#fcbbf9", "group": "Chat: VIP" },
-  "vipInEnd": { "type": "colorpicker", "label": "[Grad] Fondo 2", "value": "#a96bea", "group": "Chat: VIP" },
-  "vipTxt": { "type": "colorpicker", "label": "Color Texto", "value": "#ffffff", "group": "Chat: VIP" },
-  "vipIconColor": { "type": "colorpicker", "label": "Color Icono", "value": "#ffb0dd", "group": "Chat: VIP" },
-  "vipBadgeBg": { "type": "colorpicker", "label": "Fondo Rol", "value": "#ffffff", "group": "Chat: VIP" },
-  "vipBadgeTxt": { "type": "colorpicker", "label": "Texto Rol", "value": "#a96bea", "group": "Chat: VIP" },
-  "vipPosTop": { "type": "number", "label": "Pos. Arriba", "value": -20, "group": "Chat: VIP" },
-  "vipPosSide": { "type": "number", "label": "Pos. Lateral", "value": 20, "group": "Chat: VIP" },
-
-  "fOutBg": { "type": "colorpicker", "label": "Fondo Ext.", "value": "#ffffff", "group": "Alerta: Follow" },
-  "fBorderShow": { "type": "dropdown", "label": "Mostrar Borde", "value": "yes", "options": {"yes":"SI","no":"NO"}, "group": "Alerta: Follow" },
-  "fBorderType": { "type": "dropdown", "label": "Tipo Borde", "value": "grad", "options": {"grad":"Degradado","solid":"Sólido"}, "group": "Alerta: Follow" },
-  "fBSolid": { "type": "colorpicker", "label": "[Sólido] Borde", "value": "#ff6b6b", "group": "Alerta: Follow" },
-  "fBStart": { "type": "colorpicker", "label": "[Grad] Borde 1", "value": "#ff6b6b", "group": "Alerta: Follow" },
-  "fBEnd": { "type": "colorpicker", "label": "[Grad] Borde 2", "value": "#ff8e8e", "group": "Alerta: Follow" },
-  "fInnerType": { "type": "dropdown", "label": "Tipo Fondo", "value": "solid", "options": {"grad":"Degradado","solid":"Sólido"}, "group": "Alerta: Follow" },
-  "fInSolid": { "type": "colorpicker", "label": "[Sólido] Fondo", "value": "#ffffff", "group": "Alerta: Follow" },
-  "fInStart": { "type": "colorpicker", "label": "[Grad] Fondo 1", "value": "#ffffff", "group": "Alerta: Follow" },
-  "fInEnd": { "type": "colorpicker", "label": "[Grad] Fondo 2", "value": "#f0f0f0", "group": "Alerta: Follow" },
-  "fTxtName": { "type": "colorpicker", "label": "Color Nombre", "value": "#333333", "group": "Alerta: Follow" },
-  "fTxtMsg": { "type": "colorpicker", "label": "Color Acción", "value": "#555555", "group": "Alerta: Follow" },
-  "fIconColor": { "type": "colorpicker", "label": "Color Icono", "value": "#a96bea", "group": "Alerta: Follow" },
-  "tFollow": { "type": "text", "label": "Texto", "value": "es nuevo seguidor", "group": "Alerta: Follow" },
-
-  "sOutBg": { "type": "colorpicker", "label": "Fondo Ext.", "value": "#ffffff", "group": "Alerta: Sub" },
-  "sBorderShow": { "type": "dropdown", "label": "Mostrar Borde", "value": "yes", "options": {"yes":"SI","no":"NO"}, "group": "Alerta: Sub" },
-  "sBorderType": { "type": "dropdown", "label": "Tipo Borde", "value": "grad", "options": {"grad":"Degradado","solid":"Sólido"}, "group": "Alerta: Sub" },
-  "sBSolid": { "type": "colorpicker", "label": "[Sólido] Borde", "value": "#a96bea", "group": "Alerta: Sub" },
-  "sBStart": { "type": "colorpicker", "label": "[Grad] Borde 1", "value": "#a96bea", "group": "Alerta: Sub" },
-  "sBEnd": { "type": "colorpicker", "label": "[Grad] Borde 2", "value": "#fcbbf9", "group": "Alerta: Sub" },
-  "sInnerType": { "type": "dropdown", "label": "Tipo Fondo", "value": "solid", "options": {"grad":"Degradado","solid":"Sólido"}, "group": "Alerta: Sub" },
-  "sInSolid": { "type": "colorpicker", "label": "[Sólido] Fondo", "value": "#ffffff", "group": "Alerta: Sub" },
-  "sInStart": { "type": "colorpicker", "label": "[Grad] Fondo 1", "value": "#ffffff", "group": "Alerta: Sub" },
-  "sInEnd": { "type": "colorpicker", "label": "[Grad] Fondo 2", "value": "#f0f0f0", "group": "Alerta: Sub" },
-  "sTxtName": { "type": "colorpicker", "label": "Color Nombre", "value": "#333333", "group": "Alerta: Sub" },
-  "sTxtMsg": { "type": "colorpicker", "label": "Color Acción", "value": "#555555", "group": "Alerta: Sub" },
-  "sIconColor": { "type": "colorpicker", "label": "Color Icono", "value": "#a96bea", "group": "Alerta: Sub" },
-  "tSub": { "type": "text", "label": "Texto Nuevo", "value": "es nuevo sub", "group": "Alerta: Sub" },
-  "tResub": { "type": "text", "label": "Texto Resub", "value": "se resuscribió x", "group": "Alerta: Sub" },
-
-  "tOutBg": { "type": "colorpicker", "label": "Fondo Ext.", "value": "#ffffff", "group": "Alerta: Donación" },
-  "tBorderShow": { "type": "dropdown", "label": "Mostrar Borde", "value": "yes", "options": {"yes":"SI","no":"NO"}, "group": "Alerta: Donación" },
-  "tBorderType": { "type": "dropdown", "label": "Tipo Borde", "value": "grad", "options": {"grad":"Degradado","solid":"Sólido"}, "group": "Alerta: Donación" },
-  "tBSolid": { "type": "colorpicker", "label": "[Sólido] Borde", "value": "#4cd137", "group": "Alerta: Donación" },
-  "tBStart": { "type": "colorpicker", "label": "[Grad] Borde 1", "value": "#4cd137", "group": "Alerta: Donación" },
-  "tBEnd": { "type": "colorpicker", "label": "[Grad] Borde 2", "value": "#00cec9", "group": "Alerta: Donación" },
-  "tInnerType": { "type": "dropdown", "label": "Tipo Fondo", "value": "solid", "options": {"grad":"Degradado","solid":"Sólido"}, "group": "Alerta: Donación" },
-  "tInSolid": { "type": "colorpicker", "label": "[Sólido] Fondo", "value": "#ffffff", "group": "Alerta: Donación" },
-  "tInStart": { "type": "colorpicker", "label": "[Grad] Fondo 1", "value": "#ffffff", "group": "Alerta: Donación" },
-  "tInEnd": { "type": "colorpicker", "label": "[Grad] Fondo 2", "value": "#f0f0f0", "group": "Alerta: Donación" },
-  "tTxtName": { "type": "colorpicker", "label": "Color Nombre", "value": "#333333", "group": "Alerta: Donación" },
-  "tTxtMsg": { "type": "colorpicker", "label": "Color Acción", "value": "#555555", "group": "Alerta: Donación" },
-  "tIconColor": { "type": "colorpicker", "label": "Color Icono", "value": "#a96bea", "group": "Alerta: Donación" },
-  "tTip": { "type": "text", "label": "Texto Tips", "value": "donó", "group": "Alerta: Donación" },
-
-  "cOutBg": { "type": "colorpicker", "label": "Fondo Ext.", "value": "#ffffff", "group": "Alerta: Bits" },
-  "cBorderShow": { "type": "dropdown", "label": "Mostrar Borde", "value": "yes", "options": {"yes":"SI","no":"NO"}, "group": "Alerta: Bits" },
-  "cBorderType": { "type": "dropdown", "label": "Tipo Borde", "value": "grad", "options": {"grad":"Degradado","solid":"Sólido"}, "group": "Alerta: Bits" },
-  "cBSolid": { "type": "colorpicker", "label": "[Sólido] Borde", "value": "#f1c40f", "group": "Alerta: Bits" },
-  "cBStart": { "type": "colorpicker", "label": "[Grad] Borde 1", "value": "#f1c40f", "group": "Alerta: Bits" },
-  "cBEnd": { "type": "colorpicker", "label": "[Grad] Borde 2", "value": "#e67e22", "group": "Alerta: Bits" },
-  "cInnerType": { "type": "dropdown", "label": "Tipo Fondo", "value": "solid", "options": {"grad":"Degradado","solid":"Sólido"}, "group": "Alerta: Bits" },
-  "cInSolid": { "type": "colorpicker", "label": "[Sólido] Fondo", "value": "#ffffff", "group": "Alerta: Bits" },
-  "cInStart": { "type": "colorpicker", "label": "[Grad] Fondo 1", "value": "#ffffff", "group": "Alerta: Bits" },
-  "cInEnd": { "type": "colorpicker", "label": "[Grad] Fondo 2", "value": "#f0f0f0", "group": "Alerta: Bits" },
-  "cTxtName": { "type": "colorpicker", "label": "Color Nombre", "value": "#333333", "group": "Alerta: Bits" },
-  "cTxtMsg": { "type": "colorpicker", "label": "Color Acción", "value": "#555555", "group": "Alerta: Bits" },
-  "cIconColor": { "type": "colorpicker", "label": "Color Icono", "value": "#f39c12", "group": "Alerta: Bits" },
-  "tCheer": { "type": "text", "label": "Texto Bits", "value": "envió bits", "group": "Alerta: Bits" }
+  "previewMode": {
+    "type": "dropdown",
+    "label": "Preview",
+    "value": "true",
+    "options": {
+      "true": "ON",
+      "false": "OFF"
+    },
+    "group": "General"
+  },
+  "globalAlign": {
+    "type": "dropdown",
+    "label": "Alineación Chat",
+    "value": "left",
+    "options": {
+      "left": "Izquierda",
+      "right": "Derecha"
+    },
+    "group": "General"
+  },
+  "fontBody": {
+    "type": "dropdown",
+    "label": "Tipografía Mensaje",
+    "value": "'Poppins', sans-serif",
+    "options": {
+      "'Poppins', sans-serif": "Poppins",
+      "'Roboto', sans-serif": "Roboto",
+      "'Open Sans', sans-serif": "Open Sans",
+      "'Montserrat', sans-serif": "Montserrat",
+      "'Nunito', sans-serif": "Nunito"
+    },
+    "group": "General"
+  },
+  "showEmotes": {
+    "type": "dropdown",
+    "label": "Emotes 7TV/BTTV",
+    "value": "true",
+    "options": {
+      "true": "Mostrar",
+      "false": "Ocultar"
+    },
+    "group": "General"
+  },
+  "hideDelay": {
+    "type": "number",
+    "label": "Ocultar tras (seg)",
+    "value": 30,
+    "group": "General"
+  },
+  "fontSize": {
+    "type": "number",
+    "label": "Tamaño Letra",
+    "value": 18,
+    "group": "General"
+  },
+  "borderRadius": {
+    "type": "number",
+    "label": "Redondeo",
+    "value": 25,
+    "group": "General"
+  },
+  "borderThickness": {
+    "type": "number",
+    "label": "Grosor Borde",
+    "value": 3,
+    "group": "General"
+  },
+  "chatGap": {
+    "type": "number",
+    "label": "Espacio Borde Chat",
+    "value": 6,
+    "group": "General"
+  },
+  "eventGap": {
+    "type": "number",
+    "label": "Espacio Borde Eventos",
+    "value": 6,
+    "group": "General"
+  },
+  "gradStart": {
+    "type": "colorpicker",
+    "label": "SVG Global Start",
+    "value": "#fcbbf9",
+    "group": "General"
+  },
+  "gradEnd": {
+    "type": "colorpicker",
+    "label": "SVG Global End",
+    "value": "#a96bea",
+    "group": "General"
+  },
+  "hideBots": {
+    "type": "dropdown",
+    "label": "Ocultar Bots",
+    "value": "no",
+    "options": {
+      "yes": "SI",
+      "no": "NO"
+    },
+    "group": "Anti-Spam"
+  },
+  "botNames": {
+    "type": "text",
+    "label": "Nombres Bots (coma)",
+    "value": "Nightbot,StreamElements,Streamelements",
+    "group": "Anti-Spam"
+  },
+  "hideCommands": {
+    "type": "dropdown",
+    "label": "Ocultar Comandos",
+    "value": "no",
+    "options": {
+      "yes": "SI",
+      "no": "NO"
+    },
+    "group": "Anti-Spam"
+  },
+  "commandPrefixes": {
+    "type": "text",
+    "label": "Prefijos (!, ?)",
+    "value": "!,?",
+    "group": "Anti-Spam"
+  },
+  "regOutBg": {
+    "type": "colorpicker",
+    "label": "Fondo Ext.",
+    "value": "#ffffff",
+    "group": "Chat: Usuario"
+  },
+  "regBorderShow": {
+    "type": "dropdown",
+    "label": "Borde",
+    "value": "yes",
+    "options": {
+      "yes": "SI",
+      "no": "NO"
+    },
+    "group": "Chat: Usuario"
+  },
+  "regBorderType": {
+    "type": "dropdown",
+    "label": "Tipo Borde",
+    "value": "grad",
+    "options": {
+      "grad": "Degradado",
+      "solid": "Sólido"
+    },
+    "group": "Chat: Usuario"
+  },
+  "regBSolid": {
+    "type": "colorpicker",
+    "label": "[Sólido] Borde",
+    "value": "#a96bea",
+    "group": "Chat: Usuario"
+  },
+  "regBStart": {
+    "type": "colorpicker",
+    "label": "[Grad] Borde 1",
+    "value": "#fcbbf9",
+    "group": "Chat: Usuario"
+  },
+  "regBEnd": {
+    "type": "colorpicker",
+    "label": "[Grad] Borde 2",
+    "value": "#a96bea",
+    "group": "Chat: Usuario"
+  },
+  "regInnerType": {
+    "type": "dropdown",
+    "label": "Tipo Fondo",
+    "value": "solid",
+    "options": {
+      "grad": "Degradado",
+      "solid": "Sólido"
+    },
+    "group": "Chat: Usuario"
+  },
+  "regInSolid": {
+    "type": "colorpicker",
+    "label": "[Sólido] Fondo",
+    "value": "#ffffff",
+    "group": "Chat: Usuario"
+  },
+  "regInStart": {
+    "type": "colorpicker",
+    "label": "[Grad] Fondo 1",
+    "value": "#ffffff",
+    "group": "Chat: Usuario"
+  },
+  "regInEnd": {
+    "type": "colorpicker",
+    "label": "[Grad] Fondo 2",
+    "value": "#f0f0f0",
+    "group": "Chat: Usuario"
+  },
+  "regTxt": {
+    "type": "colorpicker",
+    "label": "Color Texto",
+    "value": "#333333",
+    "group": "Chat: Usuario"
+  },
+  "regIconColor": {
+    "type": "colorpicker",
+    "label": "Color Icono",
+    "value": "#ffb0dd",
+    "group": "Chat: Usuario"
+  },
+  "regBadgeBg": {
+    "type": "colorpicker",
+    "label": "Fondo Rol",
+    "value": "#ffffff",
+    "group": "Chat: Usuario"
+  },
+  "regBadgeTxt": {
+    "type": "colorpicker",
+    "label": "Texto Rol",
+    "value": "#a96bea",
+    "group": "Chat: Usuario"
+  },
+  "regPosTop": {
+    "type": "number",
+    "label": "Pos. Arriba",
+    "value": -20,
+    "group": "Chat: Usuario"
+  },
+  "regPosSide": {
+    "type": "number",
+    "label": "Pos. Lateral",
+    "value": 20,
+    "group": "Chat: Usuario"
+  },
+  "subOutBg": {
+    "type": "colorpicker",
+    "label": "Fondo Ext.",
+    "value": "#ffffff",
+    "group": "Chat: Sub"
+  },
+  "subBorderShow": {
+    "type": "dropdown",
+    "label": "Borde",
+    "value": "yes",
+    "options": {
+      "yes": "SI",
+      "no": "NO"
+    },
+    "group": "Chat: Sub"
+  },
+  "subBorderType": {
+    "type": "dropdown",
+    "label": "Tipo Borde",
+    "value": "grad",
+    "options": {
+      "grad": "Degradado",
+      "solid": "Sólido"
+    },
+    "group": "Chat: Sub"
+  },
+  "subBSolid": {
+    "type": "colorpicker",
+    "label": "[Sólido] Borde",
+    "value": "#a96bea",
+    "group": "Chat: Sub"
+  },
+  "subBStart": {
+    "type": "colorpicker",
+    "label": "[Grad] Borde 1",
+    "value": "#fcbbf9",
+    "group": "Chat: Sub"
+  },
+  "subBEnd": {
+    "type": "colorpicker",
+    "label": "[Grad] Borde 2",
+    "value": "#a96bea",
+    "group": "Chat: Sub"
+  },
+  "subInnerType": {
+    "type": "dropdown",
+    "label": "Tipo Fondo",
+    "value": "solid",
+    "options": {
+      "grad": "Degradado",
+      "solid": "Sólido"
+    },
+    "group": "Chat: Sub"
+  },
+  "subInSolid": {
+    "type": "colorpicker",
+    "label": "[Sólido] Fondo",
+    "value": "#ffffff",
+    "group": "Chat: Sub"
+  },
+  "subInStart": {
+    "type": "colorpicker",
+    "label": "[Grad] Fondo 1",
+    "value": "#ffffff",
+    "group": "Chat: Sub"
+  },
+  "subInEnd": {
+    "type": "colorpicker",
+    "label": "[Grad] Fondo 2",
+    "value": "#f0f0f0",
+    "group": "Chat: Sub"
+  },
+  "subTxt": {
+    "type": "colorpicker",
+    "label": "Color Texto",
+    "value": "#333333",
+    "group": "Chat: Sub"
+  },
+  "subIconColor": {
+    "type": "colorpicker",
+    "label": "Color Icono",
+    "value": "#ffb0dd",
+    "group": "Chat: Sub"
+  },
+  "subBadgeBg": {
+    "type": "colorpicker",
+    "label": "Fondo Rol",
+    "value": "#ffffff",
+    "group": "Chat: Sub"
+  },
+  "subBadgeTxt": {
+    "type": "colorpicker",
+    "label": "Texto Rol",
+    "value": "#a96bea",
+    "group": "Chat: Sub"
+  },
+  "subPosTop": {
+    "type": "number",
+    "label": "Pos. Arriba",
+    "value": -20,
+    "group": "Chat: Sub"
+  },
+  "subPosSide": {
+    "type": "number",
+    "label": "Pos. Lateral",
+    "value": 20,
+    "group": "Chat: Sub"
+  },
+  "modOutBg": {
+    "type": "colorpicker",
+    "label": "Fondo Ext.",
+    "value": "#ffffff",
+    "group": "Chat: Mod"
+  },
+  "modBorderShow": {
+    "type": "dropdown",
+    "label": "Borde",
+    "value": "yes",
+    "options": {
+      "yes": "SI",
+      "no": "NO"
+    },
+    "group": "Chat: Mod"
+  },
+  "modBorderType": {
+    "type": "dropdown",
+    "label": "Tipo Borde",
+    "value": "grad",
+    "options": {
+      "grad": "Degradado",
+      "solid": "Sólido"
+    },
+    "group": "Chat: Mod"
+  },
+  "modBSolid": {
+    "type": "colorpicker",
+    "label": "[Sólido] Borde",
+    "value": "#a96bea",
+    "group": "Chat: Mod"
+  },
+  "modBStart": {
+    "type": "colorpicker",
+    "label": "[Grad] Borde 1",
+    "value": "#a96bea",
+    "group": "Chat: Mod"
+  },
+  "modBEnd": {
+    "type": "colorpicker",
+    "label": "[Grad] Borde 2",
+    "value": "#fcbbf9",
+    "group": "Chat: Mod"
+  },
+  "modInnerType": {
+    "type": "dropdown",
+    "label": "Tipo Fondo",
+    "value": "grad",
+    "options": {
+      "grad": "Degradado",
+      "solid": "Sólido"
+    },
+    "group": "Chat: Mod"
+  },
+  "modInSolid": {
+    "type": "colorpicker",
+    "label": "[Sólido] Fondo",
+    "value": "#a96bea",
+    "group": "Chat: Mod"
+  },
+  "modInStart": {
+    "type": "colorpicker",
+    "label": "[Grad] Fondo 1",
+    "value": "#a96bea",
+    "group": "Chat: Mod"
+  },
+  "modInEnd": {
+    "type": "colorpicker",
+    "label": "[Grad] Fondo 2",
+    "value": "#fcbbf9",
+    "group": "Chat: Mod"
+  },
+  "modTxt": {
+    "type": "colorpicker",
+    "label": "Color Texto",
+    "value": "#ffffff",
+    "group": "Chat: Mod"
+  },
+  "modIconColor": {
+    "type": "colorpicker",
+    "label": "Color Icono",
+    "value": "#ffffff",
+    "group": "Chat: Mod"
+  },
+  "modBadgeBg": {
+    "type": "colorpicker",
+    "label": "Fondo Rol",
+    "value": "#ffffff",
+    "group": "Chat: Mod"
+  },
+  "modBadgeTxt": {
+    "type": "colorpicker",
+    "label": "Texto Rol",
+    "value": "#a96bea",
+    "group": "Chat: Mod"
+  },
+  "modPosTop": {
+    "type": "number",
+    "label": "Pos. Arriba",
+    "value": -20,
+    "group": "Chat: Mod"
+  },
+  "modPosSide": {
+    "type": "number",
+    "label": "Pos. Lateral",
+    "value": 20,
+    "group": "Chat: Mod"
+  },
+  "vipOutBg": {
+    "type": "colorpicker",
+    "label": "Fondo Ext.",
+    "value": "#ffffff",
+    "group": "Chat: VIP"
+  },
+  "vipBorderShow": {
+    "type": "dropdown",
+    "label": "Borde",
+    "value": "yes",
+    "options": {
+      "yes": "SI",
+      "no": "NO"
+    },
+    "group": "Chat: VIP"
+  },
+  "vipBorderType": {
+    "type": "dropdown",
+    "label": "Tipo Borde",
+    "value": "grad",
+    "options": {
+      "grad": "Degradado",
+      "solid": "Sólido"
+    },
+    "group": "Chat: VIP"
+  },
+  "vipBSolid": {
+    "type": "colorpicker",
+    "label": "[Sólido] Borde",
+    "value": "#a96bea",
+    "group": "Chat: VIP"
+  },
+  "vipBStart": {
+    "type": "colorpicker",
+    "label": "[Grad] Borde 1",
+    "value": "#fcbbf9",
+    "group": "Chat: VIP"
+  },
+  "vipBEnd": {
+    "type": "colorpicker",
+    "label": "[Grad] Borde 2",
+    "value": "#a96bea",
+    "group": "Chat: VIP"
+  },
+  "vipInnerType": {
+    "type": "dropdown",
+    "label": "Tipo Fondo",
+    "value": "grad",
+    "options": {
+      "grad": "Degradado",
+      "solid": "Sólido"
+    },
+    "group": "Chat: VIP"
+  },
+  "vipInSolid": {
+    "type": "colorpicker",
+    "label": "[Sólido] Fondo",
+    "value": "#fcbbf9",
+    "group": "Chat: VIP"
+  },
+  "vipInStart": {
+    "type": "colorpicker",
+    "label": "[Grad] Fondo 1",
+    "value": "#fcbbf9",
+    "group": "Chat: VIP"
+  },
+  "vipInEnd": {
+    "type": "colorpicker",
+    "label": "[Grad] Fondo 2",
+    "value": "#a96bea",
+    "group": "Chat: VIP"
+  },
+  "vipTxt": {
+    "type": "colorpicker",
+    "label": "Color Texto",
+    "value": "#ffffff",
+    "group": "Chat: VIP"
+  },
+  "vipIconColor": {
+    "type": "colorpicker",
+    "label": "Color Icono",
+    "value": "#ffb0dd",
+    "group": "Chat: VIP"
+  },
+  "vipBadgeBg": {
+    "type": "colorpicker",
+    "label": "Fondo Rol",
+    "value": "#ffffff",
+    "group": "Chat: VIP"
+  },
+  "vipBadgeTxt": {
+    "type": "colorpicker",
+    "label": "Texto Rol",
+    "value": "#a96bea",
+    "group": "Chat: VIP"
+  },
+  "vipPosTop": {
+    "type": "number",
+    "label": "Pos. Arriba",
+    "value": -20,
+    "group": "Chat: VIP"
+  },
+  "vipPosSide": {
+    "type": "number",
+    "label": "Pos. Lateral",
+    "value": 20,
+    "group": "Chat: VIP"
+  },
+  "fOutBg": {
+    "type": "colorpicker",
+    "label": "Fondo Ext.",
+    "value": "#ffffff",
+    "group": "Alerta: Follow"
+  },
+  "fBorderShow": {
+    "type": "dropdown",
+    "label": "Mostrar Borde",
+    "value": "yes",
+    "options": {
+      "yes": "SI",
+      "no": "NO"
+    },
+    "group": "Alerta: Follow"
+  },
+  "fBorderType": {
+    "type": "dropdown",
+    "label": "Tipo Borde",
+    "value": "grad",
+    "options": {
+      "grad": "Degradado",
+      "solid": "Sólido"
+    },
+    "group": "Alerta: Follow"
+  },
+  "fBSolid": {
+    "type": "colorpicker",
+    "label": "[Sólido] Borde",
+    "value": "#ff6b6b",
+    "group": "Alerta: Follow"
+  },
+  "fBStart": {
+    "type": "colorpicker",
+    "label": "[Grad] Borde 1",
+    "value": "#ff6b6b",
+    "group": "Alerta: Follow"
+  },
+  "fBEnd": {
+    "type": "colorpicker",
+    "label": "[Grad] Borde 2",
+    "value": "#ff8e8e",
+    "group": "Alerta: Follow"
+  },
+  "fInnerType": {
+    "type": "dropdown",
+    "label": "Tipo Fondo",
+    "value": "solid",
+    "options": {
+      "grad": "Degradado",
+      "solid": "Sólido"
+    },
+    "group": "Alerta: Follow"
+  },
+  "fInSolid": {
+    "type": "colorpicker",
+    "label": "[Sólido] Fondo",
+    "value": "#ffffff",
+    "group": "Alerta: Follow"
+  },
+  "fInStart": {
+    "type": "colorpicker",
+    "label": "[Grad] Fondo 1",
+    "value": "#ffffff",
+    "group": "Alerta: Follow"
+  },
+  "fInEnd": {
+    "type": "colorpicker",
+    "label": "[Grad] Fondo 2",
+    "value": "#f0f0f0",
+    "group": "Alerta: Follow"
+  },
+  "fTxtName": {
+    "type": "colorpicker",
+    "label": "Color Nombre",
+    "value": "#333333",
+    "group": "Alerta: Follow"
+  },
+  "fTxtMsg": {
+    "type": "colorpicker",
+    "label": "Color Acción",
+    "value": "#555555",
+    "group": "Alerta: Follow"
+  },
+  "fIconColor": {
+    "type": "colorpicker",
+    "label": "Color Icono",
+    "value": "#a96bea",
+    "group": "Alerta: Follow"
+  },
+  "tFollow": {
+    "type": "text",
+    "label": "Texto",
+    "value": "es nuevo seguidor",
+    "group": "Alerta: Follow"
+  },
+  "sOutBg": {
+    "type": "colorpicker",
+    "label": "Fondo Ext.",
+    "value": "#ffffff",
+    "group": "Alerta: Sub"
+  },
+  "sBorderShow": {
+    "type": "dropdown",
+    "label": "Mostrar Borde",
+    "value": "yes",
+    "options": {
+      "yes": "SI",
+      "no": "NO"
+    },
+    "group": "Alerta: Sub"
+  },
+  "sBorderType": {
+    "type": "dropdown",
+    "label": "Tipo Borde",
+    "value": "grad",
+    "options": {
+      "grad": "Degradado",
+      "solid": "Sólido"
+    },
+    "group": "Alerta: Sub"
+  },
+  "sBSolid": {
+    "type": "colorpicker",
+    "label": "[Sólido] Borde",
+    "value": "#a96bea",
+    "group": "Alerta: Sub"
+  },
+  "sBStart": {
+    "type": "colorpicker",
+    "label": "[Grad] Borde 1",
+    "value": "#a96bea",
+    "group": "Alerta: Sub"
+  },
+  "sBEnd": {
+    "type": "colorpicker",
+    "label": "[Grad] Borde 2",
+    "value": "#fcbbf9",
+    "group": "Alerta: Sub"
+  },
+  "sInnerType": {
+    "type": "dropdown",
+    "label": "Tipo Fondo",
+    "value": "solid",
+    "options": {
+      "grad": "Degradado",
+      "solid": "Sólido"
+    },
+    "group": "Alerta: Sub"
+  },
+  "sInSolid": {
+    "type": "colorpicker",
+    "label": "[Sólido] Fondo",
+    "value": "#ffffff",
+    "group": "Alerta: Sub"
+  },
+  "sInStart": {
+    "type": "colorpicker",
+    "label": "[Grad] Fondo 1",
+    "value": "#ffffff",
+    "group": "Alerta: Sub"
+  },
+  "sInEnd": {
+    "type": "colorpicker",
+    "label": "[Grad] Fondo 2",
+    "value": "#f0f0f0",
+    "group": "Alerta: Sub"
+  },
+  "sTxtName": {
+    "type": "colorpicker",
+    "label": "Color Nombre",
+    "value": "#333333",
+    "group": "Alerta: Sub"
+  },
+  "sTxtMsg": {
+    "type": "colorpicker",
+    "label": "Color Acción",
+    "value": "#555555",
+    "group": "Alerta: Sub"
+  },
+  "sIconColor": {
+    "type": "colorpicker",
+    "label": "Color Icono",
+    "value": "#a96bea",
+    "group": "Alerta: Sub"
+  },
+  "tSub": {
+    "type": "text",
+    "label": "Texto Nuevo",
+    "value": "es nuevo sub",
+    "group": "Alerta: Sub"
+  },
+  "tResub": {
+    "type": "text",
+    "label": "Texto Resub",
+    "value": "se resuscribió x",
+    "group": "Alerta: Sub"
+  },
+  "tOutBg": {
+    "type": "colorpicker",
+    "label": "Fondo Ext.",
+    "value": "#ffffff",
+    "group": "Alerta: Donación"
+  },
+  "tBorderShow": {
+    "type": "dropdown",
+    "label": "Mostrar Borde",
+    "value": "yes",
+    "options": {
+      "yes": "SI",
+      "no": "NO"
+    },
+    "group": "Alerta: Donación"
+  },
+  "tBorderType": {
+    "type": "dropdown",
+    "label": "Tipo Borde",
+    "value": "grad",
+    "options": {
+      "grad": "Degradado",
+      "solid": "Sólido"
+    },
+    "group": "Alerta: Donación"
+  },
+  "tBSolid": {
+    "type": "colorpicker",
+    "label": "[Sólido] Borde",
+    "value": "#4cd137",
+    "group": "Alerta: Donación"
+  },
+  "tBStart": {
+    "type": "colorpicker",
+    "label": "[Grad] Borde 1",
+    "value": "#4cd137",
+    "group": "Alerta: Donación"
+  },
+  "tBEnd": {
+    "type": "colorpicker",
+    "label": "[Grad] Borde 2",
+    "value": "#00cec9",
+    "group": "Alerta: Donación"
+  },
+  "tInnerType": {
+    "type": "dropdown",
+    "label": "Tipo Fondo",
+    "value": "solid",
+    "options": {
+      "grad": "Degradado",
+      "solid": "Sólido"
+    },
+    "group": "Alerta: Donación"
+  },
+  "tInSolid": {
+    "type": "colorpicker",
+    "label": "[Sólido] Fondo",
+    "value": "#ffffff",
+    "group": "Alerta: Donación"
+  },
+  "tInStart": {
+    "type": "colorpicker",
+    "label": "[Grad] Fondo 1",
+    "value": "#ffffff",
+    "group": "Alerta: Donación"
+  },
+  "tInEnd": {
+    "type": "colorpicker",
+    "label": "[Grad] Fondo 2",
+    "value": "#f0f0f0",
+    "group": "Alerta: Donación"
+  },
+  "tTxtName": {
+    "type": "colorpicker",
+    "label": "Color Nombre",
+    "value": "#333333",
+    "group": "Alerta: Donación"
+  },
+  "tTxtMsg": {
+    "type": "colorpicker",
+    "label": "Color Acción",
+    "value": "#555555",
+    "group": "Alerta: Donación"
+  },
+  "tIconColor": {
+    "type": "colorpicker",
+    "label": "Color Icono",
+    "value": "#a96bea",
+    "group": "Alerta: Donación"
+  },
+  "tTip": {
+    "type": "text",
+    "label": "Texto Tips",
+    "value": "donó",
+    "group": "Alerta: Donación"
+  },
+  "cOutBg": {
+    "type": "colorpicker",
+    "label": "Fondo Ext.",
+    "value": "#ffffff",
+    "group": "Alerta: Bits"
+  },
+  "cBorderShow": {
+    "type": "dropdown",
+    "label": "Mostrar Borde",
+    "value": "yes",
+    "options": {
+      "yes": "SI",
+      "no": "NO"
+    },
+    "group": "Alerta: Bits"
+  },
+  "cBorderType": {
+    "type": "dropdown",
+    "label": "Tipo Borde",
+    "value": "grad",
+    "options": {
+      "grad": "Degradado",
+      "solid": "Sólido"
+    },
+    "group": "Alerta: Bits"
+  },
+  "cBSolid": {
+    "type": "colorpicker",
+    "label": "[Sólido] Borde",
+    "value": "#f1c40f",
+    "group": "Alerta: Bits"
+  },
+  "cBStart": {
+    "type": "colorpicker",
+    "label": "[Grad] Borde 1",
+    "value": "#f1c40f",
+    "group": "Alerta: Bits"
+  },
+  "cBEnd": {
+    "type": "colorpicker",
+    "label": "[Grad] Borde 2",
+    "value": "#e67e22",
+    "group": "Alerta: Bits"
+  },
+  "cInnerType": {
+    "type": "dropdown",
+    "label": "Tipo Fondo",
+    "value": "solid",
+    "options": {
+      "grad": "Degradado",
+      "solid": "Sólido"
+    },
+    "group": "Alerta: Bits"
+  },
+  "cInSolid": {
+    "type": "colorpicker",
+    "label": "[Sólido] Fondo",
+    "value": "#ffffff",
+    "group": "Alerta: Bits"
+  },
+  "cInStart": {
+    "type": "colorpicker",
+    "label": "[Grad] Fondo 1",
+    "value": "#ffffff",
+    "group": "Alerta: Bits"
+  },
+  "cInEnd": {
+    "type": "colorpicker",
+    "label": "[Grad] Fondo 2",
+    "value": "#f0f0f0",
+    "group": "Alerta: Bits"
+  },
+  "cTxtName": {
+    "type": "colorpicker",
+    "label": "Color Nombre",
+    "value": "#333333",
+    "group": "Alerta: Bits"
+  },
+  "cTxtMsg": {
+    "type": "colorpicker",
+    "label": "Color Acción",
+    "value": "#555555",
+    "group": "Alerta: Bits"
+  },
+  "cIconColor": {
+    "type": "colorpicker",
+    "label": "Color Icono",
+    "value": "#f39c12",
+    "group": "Alerta: Bits"
+  },
+  "tCheer": {
+    "type": "text",
+    "label": "Texto Bits",
+    "value": "envió bits",
+    "group": "Alerta: Bits"
+  }
 }
