@@ -35,16 +35,18 @@ window.addEventListener('onWidgetLoad', (obj) => {
     config = obj.detail.fieldData;
     
     // Inyectar variables SVG
-    document.documentElement.style.setProperty('--grad-start', config.gradStart);
-    document.documentElement.style.setProperty('--grad-end', config.gradEnd);
+let totalEvents = 0;
+let config = {};
 
+window.addEventListener('onWidgetLoad', (obj) => {
+    config = obj.detail.fieldData;
+    
+    // Alineación
     const align = config.globalAlign || 'left';
     document.getElementById('main-container').style.alignItems = align === 'right' ? 'flex-end' : 'flex-start';
 
     if (config.showEmotes === "false") document.body.classList.add('no-emotes');
     if (config.previewMode === "true") setTimeout(triggerPreview, 1000);
-    
-    console.log("%c ⚡ Code by @rxgeit ⚡ ", "background: #a96bea; color: #fff; padding: 5px;");
 });
 
 window.addEventListener('onEventReceived', (obj) => {
@@ -52,6 +54,7 @@ window.addEventListener('onEventReceived', (obj) => {
     const e = obj.detail.event;
     
     if (l === 'message') {
+        // Filtros
         if (config.hideBots === 'yes') {
             const bots = (config.botNames || "").toLowerCase().split(',').map(s=>s.trim());
             if (bots.includes(e.data.displayName.toLowerCase())) return;
@@ -88,8 +91,10 @@ function getStyle(r) {
         : config[r + 'InSolid'];
 
     const hasBorder = config[r + 'BorderShow'] === 'yes';
+    
     const isChat = ['reg', 'sub', 'mod', 'vip'].includes(r);
     const padding = isChat ? config.chatGap : config.eventGap;
+
     const txtName = config[r + 'TxtName'] || config[r + 'Txt'];
     const txtMsg = config[r + 'TxtMsg'] || config[r + 'Txt'];
 
@@ -136,7 +141,6 @@ function renderAlert(i, n, a, m, r) {
 
 function append(h) {
     const c = document.getElementById('main-container');
-    if(!c) return;
     const w = document.createElement('div'); w.innerHTML = h; const el = w.firstChild;
     c.appendChild(el); totalEvents++;
     setTimeout(() => { 
@@ -147,6 +151,9 @@ function append(h) {
 }
 
 function triggerPreview() {
-    renderChat("Streamer", "Prueba de chat Híbrido", "mod");
+    renderChat("Streamer", "¡Mensaje de prueba con tu fuente elegida!", "mod");
     setTimeout(() => handleAlerts('follower-latest', {name: "Seguidor"}), 1500);
+    setTimeout(() => renderChat("Suscriptor", "Probando...", "sub"), 3000);
+    setTimeout(() => handleAlerts('tip-latest', {name: "Donador", amount: "$50"}), 4500);
+    setTimeout(() => handleAlerts('cheer-latest', {name: "CheerUser", amount: "100"}), 6000);
 }
