@@ -1,1 +1,39 @@
 
+<div class="main-container">
+    <svg id="svg-bg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 470.02 230.48">
+      <defs>
+        <style>
+          .font-style { font-family: 'Fredoka One', cursive; text-anchor: middle; dominant-baseline: middle; font-weight: bold; }
+          .bordered-box { stroke-alignment: inner; vector-effect: non-scaling-stroke; }
+        </style>
+        <linearGradient id="grad-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="var(--bg-grad-start, #ff9a9e)" />
+            <stop offset="100%" stop-color="var(--bg-grad-end, #fecfef)" />
+        </linearGradient>
+        <linearGradient id="grad-top" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="var(--top-grad-start, #fcbbf9)" />
+            <stop offset="100%" stop-color="var(--top-grad-end, #a96bea)" />
+        </linearGradient>
+        <linearGradient id="grad-btm" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="var(--btm-grad-start, #fcbbf9)" />
+            <stop offset="100%" stop-color="var(--btm-grad-end, #a96bea)" />
+        </linearGradient>
+        <clipPath id="bottom-clip">
+            <rect x="0" y="172.35" width="470.02" height="58.13" rx="21.77" ry="21.77" />
+        </clipPath>
+      </defs>
+
+      <g id="bg-group"><rect id="bg-rect" class="bordered-box" x="0" y="36.74" width="470.02" height="114.2" rx="21.77" ry="21.77" fill="url(#grad-bg)"/></g>
+      <g id="top-group"><rect id="top-rect" class="bordered-box" x="0" y="46.56" width="470.02" height="114.2" rx="21.77" ry="21.77" fill="url(#grad-top)"/></g>
+      <g id="bottom-group">
+          <rect id="bottom-rect" class="bordered-box" x="0" y="172.35" width="470.02" height="58.13" rx="21.77" ry="21.77" fill="url(#grad-btm)"/>
+          <rect id="fire-overlay" class="rect-fire-active" x="0" y="172.35" width="470.02" height="58.13" rx="21.77" ry="21.77" opacity="0"/>
+      </g>
+
+      <g id="text-top-group"><text id="top-text-el" x="235" y="25" class="font-style" font-size="26"></text></g>
+      <g id="text-btm-group" clip-path="url(#bottom-clip)">
+        <g id="train-container"><text id="dynamic-bottom-text" x="235" y="201" class="font-style" font-size="29"></text></g>
+      </g>
+    </svg>
+    <div id="timer-container"><span id="timer">00:00:00</span></div>
+</div>
